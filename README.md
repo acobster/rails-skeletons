@@ -9,6 +9,10 @@ This codebase doesn't actually do anything. It's just a place for custom app-tem
 If you're curious about what the consuming code looks like, it's something like this (NOTE: yes, it's pretty terrible, but it works):
 
 ```ruby
+require 'dotenv'
+
+# ...
+
 def prompt_for_skeleton()
   unless (skeleton = ask('use skeleton files? (enter to skip)')).blank?
     Dotenv.load(File.expand_path('.skeletons', Dir.home))
