@@ -76,6 +76,6 @@ end
 _copy_skeleton = prompt_for_skeleton()
 
 after_bundle do
-  _copy_skeleton
+  _copy_skeleton.call unless _copy_skeleton.nil?
 end
 ```
