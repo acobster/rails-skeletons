@@ -1,0 +1,20 @@
+/*
+ * Utilities
+ */
+
+clearfix()
+  &:before,
+  &:after
+    content: " ";
+    display: table;
+
+  &:after
+    clear: both;
+
+// striped tables
+striped(even = $bg-color, odd = $lighter-grey)
+  tr
+    &:nth-child(odd)
+      background-color odd
+    &:nth-child(even)
+      background-color even
