@@ -4,14 +4,14 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify');
 
 var paths = {
-  normalize: ['node_modules/normalize.styl'],
-  stylus: ['app/assets/stylus/**/*.styl'],
-  js: ['app/assets/js/**/*.js'],
+  normalize: 'node_modules/normalize.styl',
+  stylus: 'app/assets/stylus/',
+  js: 'app/assets/js/',
 };
 
 // Compile stylus to public/css
 gulp.task('stylus', function() {
-  return gulp.src(paths.stylus)
+  return gulp.src(paths.stylus+'app.styl')
     .pipe(stylus({
       compress: true,
       include: paths.normalize,
@@ -21,17 +21,17 @@ gulp.task('stylus', function() {
 
 // Compile js
 gulp.task('js', function() {
-  return gulp.src(paths.js)
+  return gulp.src(paths.js+'app.js')
     .pipe(concat('app.js'))
     .pipe(gulp.dest('public/js'));
 });
 
 // Rerun the task when a file changes
 gulp.task('watch', function() {
-  gulp.watch(paths.stylus, ['stylus']);
-  gulp.watch(paths.js, ['js']);
+  gulp.watch(paths.stylus+'**/*.styl', ['stylus']);
+  gulp.watch(paths.js+'**/*.js', ['js']);
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['stylus', 'watch']);
+gulp.task('default', ['js', 'stylus', 'watch']);
 
