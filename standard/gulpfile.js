@@ -5,6 +5,7 @@ var gulp = require('gulp'),
 
 var paths = {
   normalize: 'node_modules/normalize.styl',
+  sgrid: 'node_modules/s-grid',
   stylus: 'app/assets/stylus/',
   js: 'app/assets/js/',
 };
@@ -14,7 +15,7 @@ gulp.task('stylus', function() {
   return gulp.src(paths.stylus+'app.styl')
     .pipe(stylus({
       compress: true,
-      include: paths.normalize,
+      include: [paths.normalize, paths.sgrid],
     }))
     .pipe(gulp.dest('public/css'));
 });
