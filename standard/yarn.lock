@@ -1009,6 +1009,10 @@ normalize-range@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
 
+normalize.styl@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/normalize.styl/-/normalize.styl-3.0.3.tgz#1a2fbc02b37e6980572e469464005260d6aa53e4"
+
 num2fraction@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"

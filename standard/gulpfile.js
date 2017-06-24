@@ -1,9 +1,10 @@
 var gulp = require('gulp'),
     stylus = require('gulp-stylus'),
     concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'); 
+    uglify = require('gulp-uglify');
 
 var paths = {
+  normalize: ['node_modules/normalize.styl'],
   stylus: ['app/assets/stylus/**/*.styl'],
   js: ['app/assets/js/**/*.js'],
 };
@@ -12,7 +13,8 @@ var paths = {
 gulp.task('stylus', function() {
   return gulp.src(paths.stylus)
     .pipe(stylus({
-      compress: true
+      compress: true,
+      include: paths.normalize,
     }))
     .pipe(gulp.dest('public/css'));
 });

@@ -9,11 +9,12 @@
   "author": "Coby Tamayo",
   "license": "GPL-3.0",
   "devDependencies": {
-    "stylus": "^0.54.5",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-stylus": "^2.6.0",
-    "gulp-uglify": "^3.0.0"
+    "gulp-uglify": "^3.0.0",
+    "normalize.styl": "^3.0.3",
+    "stylus": "^0.54.5"
   }
 }
