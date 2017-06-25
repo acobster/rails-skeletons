@@ -2,6 +2,14 @@
  * Utilities
  */
 
+
+$transition-seconds = 0.3s
+
+$z-index-top = 100
+$z-index-bottom = 0
+$z-index-below-siblings = -1
+
+
 clearfix()
   &:before,
   &:after
@@ -11,10 +19,34 @@ clearfix()
   &:after
     clear: both;
 
-// striped tables
 striped(even = $bg-color, odd = $lighter-grey)
+  &:nth-child(odd)
+    background-color: odd
+  &:nth-child(even)
+    background-color: even
+
+striped-table(even = $bg-color, odd = $lighter-grey)
   tr
-    &:nth-child(odd)
-      background-color odd
-    &:nth-child(even)
-      background-color even
+    striped()
+
+opacity()
+  // TODO
+
+transition()
+  // TODO
+
+tranform()
+  // TODO
+
+translate()
+  // TODO
+
+translateX()
+  // TODO
+
+translateY()
+  // TODO
+
+rotate()
+  // TODO
+
